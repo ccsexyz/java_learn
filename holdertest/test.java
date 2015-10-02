@@ -1,7 +1,7 @@
 /*************************************************************************
 	> File Name: test.java
-	> Author: 
-	> Mail: 
+	> Author:
+	> Mail:
 	> Created Time: 2015年10月02日 星期五 11时13分09秒
  ************************************************************************/
 
@@ -17,6 +17,17 @@ public class test
         System.out.println(a.intValue());
         double l = max(1.2, 12,3, 45,3, 3,3, 234,432);
         System.out.println(l);
+
+        try
+        {
+            String name = "test.package";
+            Class cl = Class.forName(name);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
     public static double max(double... values)
