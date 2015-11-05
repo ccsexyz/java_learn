@@ -23,11 +23,12 @@ public class ListenerClient extends Thread {
                         client.getInputStream()));
                 writer = new PrintWriter(client.getOutputStream(), true);
                 msg = reader.readLine();
+                if(msg == null) break;
                 sendMsg(msg);
 
             } catch (IOException e) {
                 println(e.toString());
-                // e.printStackTrace();
+                //e.printStackTrace();
                 break;
             }
             if (msg != null && msg.trim() != "") {
