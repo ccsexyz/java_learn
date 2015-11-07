@@ -155,6 +155,7 @@ void Widget::changeEvent(QEvent *e)
 
 QString Widget::getIP()  //获取ip地址
 {
+    return "192.168.1.124";
     QList<QHostAddress> list = QNetworkInterface::allAddresses();
     foreach (QHostAddress address, list) {
         //qDebug() << address.toString() << address.scopeId();
